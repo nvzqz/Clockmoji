@@ -102,6 +102,9 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
     /// Twelve thirty.
     case twelveThirty = "🕧"
 
+    /// All clock faces.
+    public static let all = Array(ClockFace.one...ClockFace.twelveThirty)
+
     #else
 
     /// One o'clock.
@@ -175,6 +178,9 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
 
     /// Twelve thirty.
     case TwelveThirty = "🕧"
+
+    /// All clock faces.
+    public static let all = (UInt8(0)..<24).map({ unsafeBitCast($0, ClockFace.self) })
 
     #endif
 
