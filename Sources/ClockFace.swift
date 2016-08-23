@@ -26,7 +26,7 @@
 //
 
 /// A clock face with a raw emoji value.
-public enum ClockFace: Character, Comparable, CustomStringConvertible {
+public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertible {
 
     #if swift(>=3)
 
@@ -181,6 +181,21 @@ public enum ClockFace: Character, Comparable, CustomStringConvertible {
     /// A textual representation of this instance.
     public var description: String {
         return String(rawValue)
+    }
+
+    /// Returns a stride `x` such that `self.advanced(by: x) == other`.
+    ///
+    /// - Complexity: O(1).
+    public func distance(to other: ClockFace) -> Int {
+        return other.hashValue - self.hashValue
+    }
+
+    /// Returns a `Self` `x` such that `self.distance(to: x) == n`.
+    ///
+    /// - Complexity: O(1).
+    public func advanced(by n: Int) -> ClockFace {
+        let advanced = hashValue.advanced(by: n % 24) % 24
+        return unsafeBitCast(UInt8(advanced), to: ClockFace.self)
     }
 
 }
