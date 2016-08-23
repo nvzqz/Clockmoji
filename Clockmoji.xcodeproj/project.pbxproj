@@ -6,6 +6,13 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		520683301D6CFD6700160547 /* ClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5206832F1D6CFD6700160547 /* ClockFace.swift */; };
+		520683311D6CFD6700160547 /* ClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5206832F1D6CFD6700160547 /* ClockFace.swift */; };
+		520683321D6CFD6700160547 /* ClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5206832F1D6CFD6700160547 /* ClockFace.swift */; };
+		520683331D6CFD6700160547 /* ClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5206832F1D6CFD6700160547 /* ClockFace.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		520682FB1D6CFBBB00160547 /* Clockmoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Clockmoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		520683091D6CFBC700160547 /* Clockmoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Clockmoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -13,6 +20,7 @@
 		520683231D6CFBDF00160547 /* Clockmoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Clockmoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5206832D1D6CFC4A00160547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Clockmoji.xcodeproj/Info.plist; sourceTree = "<group>"; };
 		5206832E1D6CFD1A00160547 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		5206832F1D6CFD6700160547 /* ClockFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,7 @@
 		5206832B1D6CFC3A00160547 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				5206832F1D6CFD6700160547 /* ClockFace.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -200,21 +209,25 @@
 					520682FA1D6CFBBB00160547 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = D97BP28TP2;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					520683081D6CFBC700160547 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = D97BP28TP2;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					520683151D6CFBD500160547 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = D97BP28TP2;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					520683221D6CFBDF00160547 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = D97BP28TP2;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -275,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520683301D6CFD6700160547 /* ClockFace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520683311D6CFD6700160547 /* ClockFace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520683321D6CFD6700160547 /* ClockFace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520683331D6CFD6700160547 /* ClockFace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
