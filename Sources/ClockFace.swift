@@ -189,6 +189,17 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
         return String(rawValue)
     }
 
+    /// Creates a clock face from `time`.
+    ///
+    /// - parameter time: The time for the clock in a 12-hour interval.
+    public init(time: Double) {
+        #if swift(>=3)
+            self = ClockFace.twelve.advanced(by: Int(time * 2))
+        #else
+            self = ClockFace.Twelve.advancedBy(Int(time * 2))
+        #endif
+    }
+
     #if swift(>=3)
 
     /// Returns a stride `x` such that `self.advanced(by: x) == other`.
