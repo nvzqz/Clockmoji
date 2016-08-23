@@ -196,7 +196,12 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
     ///
     /// - Complexity: O(1).
     public func advanced(by n: Int) -> ClockFace {
-        let advanced = hashValue.advanced(by: n % 24) % 24
+        guard n != 0 else {
+            return self
+        }
+        let advanced: Int = n < 0
+            ? (hashValue.advanced(by: n % 24) + 24) % 24
+            :  hashValue.advanced(by: n % 24) % 24
         return unsafeBitCast(UInt8(advanced), to: ClockFace.self)
     }
 
@@ -213,7 +218,12 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
     ///
     /// - Complexity: O(1).
     public func advancedBy(n: Int) -> ClockFace {
-        let advanced = hashValue.advancedBy(n % 24) % 24
+        guard n != 0 else {
+            return self
+        }
+        let advanced: Int = n < 0
+            ? (hashValue.advancedBy(n % 24) + 24) % 24
+            :  hashValue.advancedBy(n % 24) % 24
         return unsafeBitCast(UInt8(advanced), ClockFace.self)
     }
 
