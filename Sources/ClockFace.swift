@@ -26,7 +26,7 @@
 //
 
 /// A clock face with a raw emoji value.
-public enum ClockFace: Character, CustomStringConvertible {
+public enum ClockFace: Character, Comparable, CustomStringConvertible {
 
     #if swift(>=3)
 
@@ -183,4 +183,9 @@ public enum ClockFace: Character, CustomStringConvertible {
         return String(rawValue)
     }
 
+}
+
+/// Returns a Boolean value that indicates whether the first argument is less than the second argument.
+public func < (lhs: ClockFace, rhs: ClockFace) -> Bool {
+    return lhs.hashValue < rhs.hashValue
 }
