@@ -208,6 +208,16 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
         return String(rawValue)
     }
 
+    /// Whether `self` is a whole hour.
+    public var isHour: Bool {
+        return hashValue % 2 == 0
+    }
+
+    /// Whether `self` is a half hour.
+    public var isHalfHour: Bool {
+        return !isHour
+    }
+
     /// Creates a clock face from `time`.
     ///
     /// - parameter time: The time for the clock in a 12-hour interval.
