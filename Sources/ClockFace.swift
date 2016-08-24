@@ -203,6 +203,11 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
         return ClockFace._names[hashValue]
     }
 
+    /// The name for `self` with the "o'clock" additive if `isHour` is `true`.
+    public var nameWithAdditive: String {
+        return isHour ? "\(name) o'clock" : name
+    }
+
     /// A textual representation of this instance.
     public var description: String {
         return String(rawValue)
