@@ -186,23 +186,14 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
 
     #endif
 
-    /// The names of all clock faces.
-    private static let _names = ["One",    "One thirty",
-                                 "Two",    "Two thirty",
-                                 "three",  "Three thirty",
-                                 "Four",   "Four thirty",
-                                 "Five",   "Five thirty",
-                                 "Six",    "Six thirty",
-                                 "Seven",  "Seven thirty",
-                                 "Eight",  "Eight thirty",
-                                 "Nine",   "Nine thirty",
-                                 "Ten",    "Ten thirty",
-                                 "Eleven", "Eleven thirty",
-                                 "Twelve", "Twelve thirty"]
+    /// The name bases of all clock faces.
+    private static let _nameBases = ["One",  "Two", "Three",  "Four",
+                                     "Five", "Six", "Seven",  "Eight",
+                                     "Nine", "Ten", "Eleven", "Twelve"]
 
     /// The name for `self`.
     public var name: String {
-        return ClockFace._names[hashValue]
+        return ClockFace._nameBases[hashValue >> 1] + (isHalfHour ? " thirty" : "")
     }
 
     /// The additive for `self`. Is " o'clock" (with the space) if `isHour` is `true`.
