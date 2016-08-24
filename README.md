@@ -2,6 +2,19 @@
 
 Simple time formatting using clock emojis.
 
+- [Installation](#installation)
+    - [Compatibility](#compatibility)
+    - [Swift Package Manager](#install-using-swift-package-manager)
+    - [CocoaPods](#install-using-cocoapods)
+    - [Carthage](#install-using-carthage)
+    - [Manually](#install-manually)
+- [Usage](#usage)
+    - [Time](#time)
+    - [Date](#date)
+    - [Pretty Printing](#pretty-printing)
+    - [Strideable](#strideable)
+- [License](#license)
+
 ## Installation
 
 ### Compatibility
