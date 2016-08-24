@@ -25,6 +25,8 @@
 //  THE SOFTWARE.
 //
 
+import Foundation
+
 /// A clock face with a raw emoji value.
 public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertible {
 
@@ -255,6 +257,34 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
     public init(timeInterval: Double) {
         self.init(time: timeInterval / 3600)
     }
+
+    #if swift(>=3)
+
+    /// Creates a clock face from `date` and `calendar`.
+    ///
+    /// - parameter date: The date for which to create the clock.
+    /// - parameter calendar: The calendar with which to get hours and minutes from `date`. The default value is
+    ///   `current`.
+    public init(date: Date, calendar: Calendar = .current) {
+        let hours   = Double(calendar.component(.hour,   from: date))
+        let minutes = Double(calendar.component(.minute, from: date)) / 60
+        self.init(time: hours + minutes)
+    }
+
+    #else
+
+    /// Creates a clock face from `date` and `calendar`.
+    ///
+    /// - parameter date: The date for which to create the clock.
+    /// - parameter calendar: The calendar with which to get hours and minutes from `date`. The default value is
+    ///   `currentCalendar()`.
+    public init(date: NSDate, calendar: NSCalendar = .currentCalendar()) {
+        let hours   = Double(calendar.component(.Hour,   fromDate: date))
+        let minutes = Double(calendar.component(.Minute, fromDate: date)) / 60
+        self.init(time: hours + minutes)
+    }
+
+    #endif
 
     #if swift(>=3)
 
