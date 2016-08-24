@@ -184,6 +184,25 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
 
     #endif
 
+    /// The names of all clock faces.
+    private static let _names = ["One",    "One thirty",
+                                 "Two",    "Two thirty",
+                                 "three",  "Three thirty",
+                                 "Four",   "Four thirty",
+                                 "Five",   "Five thirty",
+                                 "Six",    "Six thirty",
+                                 "Seven",  "Seven thirty",
+                                 "Eight",  "Eight thirty",
+                                 "Nine",   "Nine thirty",
+                                 "Ten",    "Ten thirty",
+                                 "Eleven", "Eleven thirty",
+                                 "Twelve", "Twelve thirty"]
+
+    /// The name for `self`.
+    public var name: String {
+        return ClockFace._names[hashValue]
+    }
+
     /// A textual representation of this instance.
     public var description: String {
         return String(rawValue)
