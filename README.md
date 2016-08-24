@@ -1,5 +1,11 @@
 # Clockmoji
 
+[![Swift 2.2 | 3.0](https://img.shields.io/badge/swift-2.2%20%7C%203.0-orange.svg)](https://developer.apple.com/swift/)
+![Platforms](https://img.shields.io/badge/platform-ios%20%7C%20macos%20%7C%20watchos%20%7C%20tvos%20%7C%20linux-lightgrey.svg)
+[![CocoaPods](https://img.shields.io/cocoapods/v/Clockmoji.svg)](https://cocoapods.org/pods/Clockmoji)
+[![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-orange.svg)](https://swift.org/package-manager/)
+
 Simple and intuitive time formatting using clock emoji.
 
 - [Installation](#installation)
