@@ -1,6 +1,6 @@
 # Clockmoji
 
-Simple time formatting using clock emojis.
+Simple and intuitive time formatting using clock emojis.
 
 - [Installation](#installation)
     - [Compatibility](#compatibility)
