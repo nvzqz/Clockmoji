@@ -93,6 +93,8 @@ Simply add the contents of the `Sources` folder into your project.
 
 The `ClockFace` enum features twenty-four cases for each clock emoji available.
 
+### Time
+
 A `ClockFace` can be created from a time.
 
 ```swift
@@ -109,6 +111,8 @@ let twoOClock = ClockFace(time: -10)  // equal to twoSomething
 let crazyFace = ClockFace(time: 42352345432)  // four: 🕓
 ```
 
+### Date
+
 `ClockFace` can be initialized from a `Date`.
 
 ```swift
@@ -121,6 +125,8 @@ A `ClockFace` can also be created from the current date if no date is specified.
 ```swift
 let face = ClockFace()  // 🕥
 ```
+
+### Strideable
 
 `ClockFace` conforms to `Strideable`, allowing it to be used within a countable
 range.
