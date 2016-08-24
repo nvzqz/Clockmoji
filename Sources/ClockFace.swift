@@ -262,10 +262,10 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
 
     /// Creates a clock face from `date` and `calendar`.
     ///
-    /// - parameter date: The date for which to create the clock.
+    /// - parameter date: The date for which to create the clock. The default value is `Date()`.
     /// - parameter calendar: The calendar with which to get hours and minutes from `date`. The default value is
     ///   `current`.
-    public init(date: Date, calendar: Calendar = .current) {
+    public init(date: Date = Date(), calendar: Calendar = .current) {
         let hours   = Double(calendar.component(.hour,   from: date))
         let minutes = Double(calendar.component(.minute, from: date)) / 60
         self.init(time: hours + minutes)
@@ -275,10 +275,10 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
 
     /// Creates a clock face from `date` and `calendar`.
     ///
-    /// - parameter date: The date for which to create the clock.
+    /// - parameter date: The date for which to create the clock. The default value is `NSDate()`.
     /// - parameter calendar: The calendar with which to get hours and minutes from `date`. The default value is
     ///   `currentCalendar()`.
-    public init(date: NSDate, calendar: NSCalendar = .currentCalendar()) {
+    public init(date: NSDate = NSDate(), calendar: NSCalendar = .currentCalendar()) {
         let hours   = Double(calendar.component(.Hour,   fromDate: date))
         let minutes = Double(calendar.component(.Minute, fromDate: date)) / 60
         self.init(time: hours + minutes)
