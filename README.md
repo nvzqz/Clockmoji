@@ -124,6 +124,9 @@ let twoOClock = ClockFace(time: -10)  // equal to twoSomething
 let crazyFace = ClockFace(time: 42352345432)  // four: 🕓
 ```
 
+The time interval for a `ClockFace` can be easily retrieved using the
+`timeInterval` property.
+
 ### Date
 
 `ClockFace` can be initialized from a `Date`.
