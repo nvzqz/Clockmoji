@@ -23,6 +23,7 @@
 		5206832F1D6CFD6700160547 /* ClockFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace.swift; sourceTree = "<group>"; };
 		520683341D6CFF1300160547 /* Clockmoji.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Clockmoji.playground; sourceTree = "<group>"; };
 		5206833A1D6D497400160547 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5206833B1D6D5F8300160547 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 				5206832C1D6CFC3E00160547 /* Support */,
 				520682FC1D6CFBBB00160547 /* Products */,
 				520683341D6CFF1300160547 /* Clockmoji.playground */,
+				5206833B1D6D5F8300160547 /* Package.swift */,
 				5206832E1D6CFD1A00160547 /* LICENSE.md */,
 				5206833A1D6D497400160547 /* README.md */,
 			);
