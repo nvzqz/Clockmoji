@@ -218,6 +218,11 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
         return !isHour
     }
 
+    /// The time interval for `self`.
+    public var timeInterval: Double {
+        return Double(hashValue + 2) * 1800
+    }
+
     /// Creates a clock face from `time`.
     ///
     /// - parameter time: The time for the clock in a 12-hour interval.
