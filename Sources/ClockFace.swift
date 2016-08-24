@@ -225,7 +225,7 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
 
     /// Creates a clock face from `time`.
     ///
-    /// - parameter time: The time for the clock in a 12-hour interval.
+    /// - parameter time: The time in hours for the clock in a 12-hour interval.
     public init(time: Double) {
         #if swift(>=3)
             self = ClockFace.twelve.advanced(by: Int(time * 2))
