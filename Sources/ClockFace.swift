@@ -234,6 +234,13 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
         #endif
     }
 
+    /// Creates a clock face from `timeInterval`.
+    ///
+    /// - parameter timeInterval: The time interval in seconds for the clock.
+    public init(timeInterval: Double) {
+        self.init(time: timeInterval / 3600)
+    }
+
     #if swift(>=3)
 
     /// Returns a stride `x` such that `self.advanced(by: x) == other`.
