@@ -126,6 +126,20 @@ A `ClockFace` can also be created from the current date if no date is specified.
 let face = ClockFace()  // 🕥
 ```
 
+### Pretty Printing
+
+`ClockFace` has multiple properties that make formatting easy.
+
+Printing a clock face directly will print its raw value.
+
+```swift
+ClockFace.tenThirty.name  // "Ten thirty"
+ClockFace.seven.nameWithAdditive  // "Seven o'clock"
+
+ClockFace.two.rawValueWithAdditive  // "🕑 o'clock"
+ClockFace.oneThirty.rawValueWithAdditive  // "🕜"
+```
+
 ### Strideable
 
 `ClockFace` conforms to `Strideable`, allowing it to be used within a countable
