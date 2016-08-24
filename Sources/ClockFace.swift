@@ -196,24 +196,24 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
         return ClockFace._nameBases[hashValue >> 1] + (isHalfHour ? " thirty" : "")
     }
 
-    /// The additive for `self`. Is " o'clock" (with the space) if `isHour` is `true`.
-    public var additive: String {
-        return isHour ? " o'clock" : ""
-    }
-
     /// The name for `self` with the "o'clock" additive if `isHour` is `true`.
     public var nameWithAdditive: String {
         return name + additive
     }
 
-    /// The raw value for `self` with the "o'clock" additive if `isHour` is `true`.
-    public var rawValueWithAdditive: String {
-        return String(rawValue) + additive
-    }
-
     /// A textual representation of this instance.
     public var description: String {
         return String(rawValue)
+    }
+
+    /// The description for `self` with the "o'clock" additive if `isHour` is `true`.
+    public var descriptionWithAdditive: String {
+        return description + additive
+    }
+
+    /// The additive for `self`. Is " o'clock" (with the space) if `isHour` is `true`.
+    public var additive: String {
+        return isHour ? " o'clock" : ""
     }
 
     /// Whether `self` is a whole hour.

@@ -152,8 +152,8 @@ Printing a clock face directly will print its raw value.
 ClockFace.tenThirty.name  // "Ten thirty"
 ClockFace.seven.nameWithAdditive  // "Seven o'clock"
 
-ClockFace.two.rawValueWithAdditive  // "🕑 o'clock"
-ClockFace.oneThirty.rawValueWithAdditive  // "🕜"
+ClockFace.two.descriptionWithAdditive  // "🕑 o'clock"
+ClockFace.oneThirty.descriptionWithAdditive  // "🕜"
 ```
 
 ### Strideable
