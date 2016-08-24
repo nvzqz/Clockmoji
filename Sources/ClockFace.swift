@@ -213,6 +213,11 @@ public enum ClockFace: Character, Comparable, Strideable, CustomStringConvertibl
         return name + additive
     }
 
+    /// The raw value for `self` with the "o'clock" additive if `isHour` is `true`.
+    public var rawValueWithAdditive: String {
+        return String(rawValue) + additive
+    }
+
     /// A textual representation of this instance.
     public var description: String {
         return String(rawValue)
